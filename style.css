@@ -9,10 +9,6 @@ body {
   margin: auto;
 }
 
-main p {
-  text-indent: 30px;
-}
-
 header {
   display: flex;
   margin: auto;
@@ -68,16 +64,18 @@ header {
 h1 {
   font-family: 'oswald';
   font-weight: 600;
+  margin-bottom: -16px;
 }
 
 .subtitle {
   font-family: 'roboto';
-  font-size: 14px;
+  font-size: 10px;
   color: gray;
 }
 
 
 .printIcon {
+  margin-bottom: 20px;
   float: right;
   font-family: 'roboto';
   font-size: 14px;
@@ -89,6 +87,7 @@ h1 {
 }
 
 .mainParagraph {
+  text-indent: 30px;
   color: rgb(99, 97, 97);
   font-family: 'Noto Serif', serif;
   font-size: 16.5px;
@@ -147,6 +146,20 @@ button {
   border: none;
   color: #fff;
   width: 150px;
+}
+
+/* This modifies our <hr> element and allows us to insert the small-logo within the horizontal line */
+/* hr code is modified from https://stackoverflow.com/questions/14202089/custom-hr-with-image-character-in-the-center comment by GeorgeButter */
+hr.hrLogo {
+  border-top: solid rgb(212, 212, 212) 1px;
+  margin: 50px 0;
+}
+hr.hrLogo:after {
+  content: url(./img/small-logo.png);
+  left: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  background: #fff;
 }
 
 footer {
